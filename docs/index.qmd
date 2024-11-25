@@ -1,0 +1,421 @@
+---
+title: "Statistics Teachers’ Day 2024"
+title-block-banner: "#023020"
+subtitle: "Experimental Design and Randomizaton Workshop"
+date: "29 Nov 2024"
+author: Charlotte Jones-Todd
+institute: University of Auckland
+format: html
+toc: true
+toc-depth: 2
+---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+## Workshop timeline
+
+
+### **10.30 am - 12:00 pm** (90 mins total)
+
+ + **10.30–10.40 am** Introduction and Welcome
+ + **10.40–11.10 am** Experimental Design (@sec-ed)
+   - Group/individual activity (@sec-edactivity)
+ + **11.15–11.45 am** Randomization (@sec-rand)
+    - Classwide activity (@sec-randactivity)
+    - Group/individual activity (@sec-scriptactivity)
++ **11.45 am – 12 pm** Discussion & Feedback (@sec-feedback)
+
+
+
+### Useful links
+
+ + [Farm Rescue: Tomato Trials](https://statbiscuit-tomato-trials.netlify.app/)
+ + [Randomization ice breaker](https://statbiscuit.github.io/mini_games/shady/index.html)
+ + [Randomization Google Sheet](https://docs.google.com/spreadsheets/d/1-MKzzD5JCwZPlNutjkUoCKQAMeAlF0TD2epJ1k0S01s/edit?usp=sharing)
+ + [Cheat sheet: randomisation explained by cows...](https://biosci738.github.io/cowstats/#/section-2) 
+ + [Posit Cloud](https://posit.cloud/)
+
+## Summary
+
+This workshop requires your **active involvement**! The content and activities are based on material used in a [second stage biostatistics](https://biosci220.github.io/BIOSCI220/) course here at UoA. Our 90 min slot roughly covers two weeks worth of the content 😱😱 Bear with me, the aim is to give an overview not an in-depth lecture!!
+
+Throughout this worksheet you'll find a number of different callout boxes:
+
+::: {.callout-tip}
+## this box will contain the expected learning objectives and/or outcomes for the material
+:::
+
+::: {.callout-note}
+## this box will contain some useful information
+:::
+
+:::{.callout-warning icon=false}
+## <i class="fa fa-question-circle" aria-hidden="true"></i> <i class="fa fa-users" aria-hidden="true"></i> <i class="fa fa-pencil-square" aria-hidden="true"></i> this box will ask you discuss/write/sketch an answer with your peers
+:::
+
+## Experimental design {#sec-ed}
+
+
+::: {.callout-tip}
+## Objectives/Outcomes
+
+ + **Define** the objectives of an experiment
+ + **Define** the response variable of an experiment
+ + **State** the experimental factors of an experiment
+ + **Identify** nuisance factors that may induce variation in the experiment
+:::
+
+### Activity {#sec-edactivity}
+
+<big>Open [Farm Rescue: Tomato Trials](https://statbiscuit-tomato-trials.netlify.app/), choose your Farm Name and **Begin**. Explore the application and familiarise yourself with the scenario and backstory! </big>
+
+<big>For the purposes of this activity, when you come to design your experiment only choose **one** variety of tomato and set only **two** treatments (one of which can be a control). Make sure to explore the greenhouse plots and the different natural conditions. </big>
+
+:::{.callout-warning icon=false}
+## <i class="fa fa-question-circle" aria-hidden="true"></i> <i class="fa fa-users" aria-hidden="true"></i> <i class="fa fa-pencil-square" aria-hidden="true"></i> Complete the following experimental design table
+
+| **Experiment Title**        | (Experiment title)                                             |
+|-----------------------------|------------------------------------------------------------|
+| **Researcher Name**         | ...                                                    |
+| **Researcher Institute**   | ...                                               |
+| **Objective**              | The objective of this experiment is to determine what proportion of manure/soil combination will have the optimal tomato yield. |
+| **Hypothesis**             |  |
+| **Response variable**      |  |
+| **Treatments**             | (You should only have chosen two, including a Control if you chose to use one) |
+| **Experimental material**  |  |
+| **How treatments will be applied** | (How did you deal with factors beyond your control (e.g., varying light intensity)) |
+| **How measurements will be taken** |  |
+:::
+
+::: {.callout-note collapse=true}
+## FAQs
+
+ + **Why are specific objectives important?** *Defining specific objectives direct you towards writing focused statements about the investigative questions you want your experiment to answer. The objective(s) are what it is you are aiming to accomplish in the experiment. The objective(s) should be written in terms of a specific verb that describes what you are doing (e.g., what you are hoping to measure/analyze/determine/test etc.).*
+ + **What is the response variable?** *The response (or dependent) variable is the focus of your experiment; it is the variable that you will measure to accomplish your objective. It should be meaningful (i.e., represent the objective) and measurable.*
+ + **Why list the experimental factors?** *Listing the experimental factors (or treatments or independent variables) you will study in your experiment helps to organise variables and work out how they may help to explain observed changes in your measurable response(s). It is important that the experimental factor can be controlled during and between experimental runs.*
+:::
+
+:::{.callout-warning icon=false}
+## <i class="fa fa-question-circle" aria-hidden="true"></i> <i class="fa fa-users" aria-hidden="true"></i> <i class="fa fa-pencil-square" aria-hidden="true"></i> Discuss 
+
+What was your approach in applying the treatments. Why/How did you choose what treatments to give what plants etc.
+:::
+
+<big> Run your experiment! </big>
+
+Verify if all plants survived or did some die before reaching maturity? If a plant died, what do you think may have caused this? Could this be treatment related, or just a random occurrence?
+
+<big> Run the in-app `R` code by hitting **Run** (*this may take a while, but just wait for the plot*) </big>
+
+                
+Is there anything that needs to be corrected on your graph? *Hint: check axis label spellings* Can you correct  the code and re-run it? Before moving on, please download the data as we will use this for the next section of the workshop.
+        
+        
+<big> Based on your results fill in the missing percentage! </big>
+
+:::{.callout-warning icon=false}
+## <i class="fa fa-question-circle" aria-hidden="true"></i> <i class="fa fa-users" aria-hidden="true"></i> <i class="fa fa-pencil-square" aria-hidden="true"></i> Discuss/Answer
+
+**What was your %?** Did your farm thrive, survive, or die? Compare your answers to others and discuss what you could improve/change in future experiments. 
+
+:::
+
+## Break
+
+<big> We'll have a few mins break before this section, if you fancy another quick game give [shady](https://statbiscuit.github.io/mini_games/shady/index.html) a go.</big>
+
+
+## Randomization tests {#sec-rand}
+
+::: {.callout-tip}
+## Objectives/Outcomes
+
+ + **Formulate** a question/hypothesis to investigate based on the given data
+ + **Write out** the appropriate null and alternative hypothesis using statistical notation for a randomization test (given a test statistic)
+ + **Carry out** a randomization test using the code/procedure provided
+ + Correctly **interpret** and **communicate** a p-value in terms of a randomization test
+:::
+ 
+ 
+::: {.callout-note collapse=true}
+## The basic approach to a randomization test
+<ul>
+        <li>Choose a statistic to measure the effect in question (e.g., differences between group means).</li>
+        <li>Calculate that test statistic on the observed data. Note this metric can be anything you wish.</li>
+        <li>
+            Construct the sampling distribution that this statistic would have if the effect were not present in the population (i.e., the distribution under the Null hypothesis). For a chosen number of times:
+            <ul>
+                <li>Shuffle the data labels.</li>
+                <li>Calculate the test statistic for the reshuffled data and retain.</li>
+            </ul>
+        </li>
+        <li>
+            Find the location of your observed statistic in the sampling distribution. The location of the observed statistic in the sampling distribution is informative:
+            <ul>
+                <li>If in the main body of the distribution, then the observed statistic could easily have occurred by chance.</li>
+                <li>If in the tail of the distribution, then the observed statistic would rarely occur by chance, and there is evidence that something other than chance is operating.</li>
+            </ul>
+        </li>
+        <li>
+            Calculate the proportion of times your reshuffled statistics equal or exceed the observed. This p-value is the probability that we observe a statistic at least as “extreme” as the one we observed.
+        </li>
+        <li>State the strength of evidence against the null on the basis of this probability.</li>
+    </ul>
+:::
+
+### Activity {#sec-randactivity}
+
+
+
+<big> We are going *back to school* and are going to swap some stickers!</big>
+
+The ten coloured (Blue or White) stickers I'm about to hand out each have a number stapled to them. These data are given below and are also in this  [Google Sheet](https://docs.google.com/spreadsheets/d/1-MKzzD5JCwZPlNutjkUoCKQAMeAlF0TD2epJ1k0S01s/edit?usp=sharing)
+
+```{r}
+#| echo: false
+set.seed(291124)
+data <- data.frame(Group = rep(c("Blue", "White"), each = 5),
+                   Value = c(rpois(5, 4), rpois(5, 5)))
+knitr::kable(data)  |>
+  kableExtra::kable_styling(full_width = F)
+
+```
+
+If we write $\mu_\text{Blue}$ and $\mu_\text{White}$ as the means of the Blue and White Groups respectively (*statisticians love using Greek letters at any given opportunity*) then we have
+
+ +  $\mu_\text{Blue}$ = `r mean(data$Value[data$Group == "Blue"])`,
+ +  $\mu_\text{White}$ = `r mean(data$Value[data$Group == "White"])`, and
+ +  $\mu_\text{Blue} - \mu_\text{White}$ = `r mean(data$Value[data$Group == "Blue"]) - mean(data$Value[data$Group == "White"])`.
+ 
+ <big>Take a note of these numbers these are the **observed** data!</big>
+ 
+ 
+:::{.callout-warning icon=false}
+## <i class="fa fa-question-circle" aria-hidden="true"></i> <i class="fa fa-users" aria-hidden="true"></i> <i class="fa fa-pencil-square" aria-hidden="true"></i> Non-sticker holders sketch the plot below on the board and annotate as we go
+
+
+```{r}
+#| echo: false
+#| message: false
+require(ggplot2)
+data.frame(x = -10:10, y = as.factor(0:20)) |>
+  ggplot(aes(x = x, y = y)) + xlab("Value of the statistic") + ylab("Count") +
+  theme_bw() + theme(axis.text = element_text(size = 14)) +
+  geom_vline(xintercept = c(-1.6, 1.6),  col = "#023020", lty = 2) + xlim(c(-4, 4)) 
+
+```
+
+:::
+ 
+<big> I want those of you with stickers to separate the stickers from the numbers and **swap your sticker** with another sticker holder (*keeping the number!*). You may, or may not, now have a different coloured sticker.</big>
+
+<big> After this iteration we're going to update the [Google Sheet](https://docs.google.com/spreadsheets/d/1-MKzzD5JCwZPlNutjkUoCKQAMeAlF0TD2epJ1k0S01s/edit?usp=sharing) by changing the **Group** labels (i.e., sticker colours).</big>
+
+<big>We'll do this a few more times... remembering to annotate your plot with the recalculated value of $\mu_\text{Blue} - \mu_\text{White}$.</big>
+
+:::{.callout-warning icon=false}
+## <i class="fa fa-question-circle" aria-hidden="true"></i> <i class="fa fa-users" aria-hidden="true"></i> <i class="fa fa-pencil-square" aria-hidden="true"></i> 
+Can you draw curve over these recalculated values to show the spread and distribution of the test statistic? What do you notice about the shape of the distribution of the test statistic? What features of the distribution can you identify? Where does the observed statistic, $\mu_\text{Blue} - \mu_\text{White}$ = `r mean(data$Value[data$Group == "Blue"]) - mean(data$Value[data$Group == "White"])`, lay (i.e., in the body or the tails of this distribution)?
+
+:::
+    
+<big> Because we don't have all day I recalculated the statistic $\mu_\text{Blue} - \mu_\text{White}$ 1000 times for the reshuffled labels and plotted this for you below. Reading this plot do your answers above differ? </big>
+
+::: {.callout-note collapse=true}
+## Test-statistic distribution under the NULL
+
+```{r collapse=TRUE}
+#| echo: false
+#| message: false
+#| warning: false
+require(tidyverse)
+set.seed(291124)
+diff_in_means <- mean(data$Value[data$Group == "Blue"]) - mean(data$Value[data$Group == "White"])
+nreps <- 1000
+randomisation_difference_mean <- numeric(nreps)
+for (i in 1:nreps) {
+  dat <- data.frame(value = data$Value)
+  dat$random_labels <- sample(data$Group, replace = FALSE)
+  randomisation_difference_mean[i] <- dat %>% 
+    group_by(random_labels) %>% summarise(mean = mean(value)) %>% 
+    summarise(diff = diff(mean)) %>% as.numeric()
+}
+results <- data.frame(randomisation_difference_mean = randomisation_difference_mean)
+ggplot(results, aes(x = randomisation_difference_mean)) +
+  geom_histogram(bins = 35) +
+  theme_bw() + theme(axis.text = element_text(size = 14)) + 
+  ylab("Count") + xlab("Differences between randomised group means") +
+  geom_vline(xintercept = diff_in_means, col = "#023020", size = 1,alpha = 0.6) +
+  annotate(geom = 'text', label = "Observed difference \n between means" , 
+           x = -0.5, y = 100, color = "#023020")
+  
+
+```
+
+:::
+
+<big> We're now going to formalise things a bit more! </big>
+
+Note that the number of times out of the 1000 iterations that 
+
+ + a value <= `r diff_in_means` was obtained was `r  sum(results$randomisation_difference_mean <= diff_in_means)`, and 
+ + a value >= `r -1*diff_in_means` was obtained was `r  sum(results$randomisation_difference_mean >= -1*diff_in_means)`.
+
+:::{.callout-warning icon=false}
+## <i class="fa fa-question-circle" aria-hidden="true"></i> <i class="fa fa-users" aria-hidden="true"></i> <i class="fa fa-pencil-square" aria-hidden="true"></i> Discuss/Answer
+
+Given the information above complete the following table.
+
+|     Description              |      Value                                |
+|------------------------------|-------------------------------------------|
+| Chosen test statistic | $\mu_\text{Blue} - \mu_\text{White}$  |
+| Observed value of test statistic    | `r diff_in_means`|
+| Number of times a value <= the test statistic was observed in the 1000 random recalculations   |                            |
+| The proportion of times a value <= the test statistic was observed in the 1000 random recalculations   |                            |
+| Number of times a value >= the negative of the test statistic was observed in the 1000 random recalculations   |                            |
+| The proportion of times a value <= the negative of the test statistic was observed in the 1000 random recalculations   |                            |
+| The proportion of times a value as least as extreme as the magnitude of the test statistic was observed |                        |
+
+
+What are we comparing our recalculated values to the observed statistic and its negative? What does your answer to the final row of the table above tell you? Does this match with your thoughts about the plot above? Why do you think that the x-axis of the plot above is centered at 0?
+
+You may find this [cheatsheet](https://biosci738.github.io/cowstats/#/section-2) useful here.
+:::
+
+
+The hypothesis test you've just carried out can be formalised as 
+ 
+ + **Test statistic**: The difference between the mean of the Blue group and the mean of the White group
+   + In maths syntax, $\mu_\text{Blue} - \mu_\text{White}$
+   
+ + **NULL hypothesis**: The mean of the Blue group is the same as the White group
+   + In maths syntax, $H_0: \mu_\text{Blue} = \mu_\text{White}$ or $H_0: \mu_\text{Blue} - \mu_\text{White} = 0$
+  
+ + **Alternative hypothesis**: The mean of the Blue group is **not** the same as the White group
+   + In maths syntax, $H_0: \mu_\text{Blue} \neq \mu_\text{White}$ or $H_0: \mu_\text{Blue} - \mu_\text{White} \neq 0$
+   
+
+The proportion of times a value as least as extreme as the magnitude of the test statistic was observed gives us information/evidence about whether the NULL hypothesis is plausible. We're not going to go into too much detail here, but it can be interpreted as a probability (in stats terminology it's called a **p-value**^[Recommended reading [The ASA Statement on p-Values: Context, Process, and Purpose](https://www.tandfonline.com/doi/full/10.1080/00031305.2016.1154108)]).
+
+:::{.callout-warning icon=false}
+## <i class="fa fa-question-circle" aria-hidden="true"></i> <i class="fa fa-users" aria-hidden="true"></i> <i class="fa fa-pencil-square" aria-hidden="true"></i> Interpret your p-value
+
+What is the probability that you observe a value as least as extreme as your test statistic under the NULL hypothesis? In your own words, do you think that you have enough evidence to reject the NULL hypothesis (i.e., could the *TRUE* difference between group means plausibly be 0)?
+
+:::
+
+
+### Script {#sec-scriptactivity}
+
+This activity assumes some familiarity with `R`. If you are not familiar with `R` I would still encourage you to give this a go, either directly in the [Farm Rescue: Tomato Trials](https://statbiscuit-tomato-trials.netlify.app/) app or most likely the easiest via [Posit Cloud](https://posit.cloud/). If you're not keen then feel free to watch someone who is and follow along the code below and/or see if you can figure out what is going on.
+
+
+<big> Using your data from the experimental design activity (@sec-edactivity) have a go running the `R` code below. </big>
+
+Note that the example below is executed using some example data from my run of the experiment; feel free to use this output to answer the questions posed.
+
+```{r}
+#| echo: false
+set.seed(12345)
+```
+
+```{r}
+#| message: false
+#| warning: false
+## required package(s)
+library(tidyverse) ##install.packages("tidyverse") # to install
+## assumes your data is downloaded into a file called results.csv
+## could use 'Import Dataset" tab
+results <- read.csv('results.csv')
+## example data
+results
+## plotting code matches app
+ggplot(data = results, aes(x = recipe, y = fruit_weight)) +
+  geom_violin() + geom_dotplot(binaxis = "y", method = "histodot") +
+  theme_bw() + xlab("Fertilizer Recipe") + ylab("Fruit Weight (g/m^2)")
+## Do we think there's a difference in treatment means?
+##---------------------------------##
+##----OBSERVED STATISTIC-----------##
+##---------------------------------##
+## Below is the calculated difference in group means given the sample
+diff_in_means <-  results %>% 
+    group_by(recipe) %>% summarise(mean = mean(fruit_weight)) %>% 
+    summarise(diff = diff(mean)) %>% as.numeric()
+diff_in_means
+##---------------------------------##
+##----RANDOMIZATION LOOP-----------##
+##---------------------------------##
+nreps <- 1000 ## number of times to iterate
+## initiate results vector
+randomisation_difference_mean <- numeric(nreps)
+for (i in 1:nreps) {
+  dat <- data.frame(value = results$fruit_weight)
+  dat$random_labels <- sample(results$recipe, replace = FALSE)
+  randomisation_difference_mean[i] <- dat %>% 
+    group_by(random_labels) %>% summarise(mean = mean(value)) %>% 
+    summarise(diff = diff(mean)) %>% as.numeric()
+}
+## store results in a data frame
+results <- data.frame(randomisation_difference_mean = randomisation_difference_mean)
+##---------------------------------##
+##----SAMPLING DISTRIBUTION--------##
+##---------------------------------##
+ggplot(results, aes(x = randomisation_difference_mean)) +
+  geom_histogram(bins = 35) +
+  theme_bw() + theme(axis.text = element_text(size = 14)) + 
+  ylab("Count") + xlab("Differences between randomised group means") +
+  geom_vline(xintercept = diff_in_means, col = "#023020", size = 1,alpha = 0.6) +
+  annotate(geom = 'text', label = "Observed difference \n between means" , 
+           x = 10, y = 75, color = "#023020")
+## Do we think there's a difference in treatment means now?
+## What do you think our strength of evidence is against the NULL hypothesis?
+##---------------------------------##
+##----P-VALUE----------------------##
+##---------------------------------##
+## How many randomized differences in means are as least as extreme as the one we observed
+## absolute value as we are dealing with two tailed test
+n_exceed <- sum(abs(results$randomisation_difference_mean) >= abs(diff_in_means))
+n_exceed/nreps
+```
+
+:::{.callout-warning icon=false}
+## <i class="fa fa-question-circle" aria-hidden="true"></i> <i class="fa fa-users" aria-hidden="true"></i> <i class="fa fa-pencil-square" aria-hidden="true"></i> Interpret the p-value
+
+State the NULL and the alternative hypothesis being carried out above.
+
+In your own words, do you think that you have enough evidence to reject the NULL hypothesis (i.e., could the *TRUE* difference between group means plausibly be 0)?
+
+:::
+
+
+::: {.callout-note collapse=true}
+##  P-values
+In summary, **p-values** can indicate how incompatible the data are with a specified statistical model; they **do not** measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.
+
+Note that a p-value does **not** measure the size of an effect or the importance of a result and by itself it does **not** provide a good measure of evidence regarding a model or hypothesis. Note also, that a substantial evidence of a difference does **not** equate to evidence of a substantial difference! Any scientific conclusions and business or policy decisions **should not** be based only on whether a p-value passes a specific threshold as proper inference requires **full** reporting and transparency. 
+
+Remember that **statistical significance does not imply practical significance**, and that **statistical significance says nothing about the size of treatment differences.** To estimate the sizes of differences you need confidence intervals (*a whole other topic*)! 
+
+
+**Some p-value threshold recursive FAQs...^[Again, read [The ASA Statement on p-Values: Context, Process, and Purpose](https://www.tandfonline.com/doi/full/10.1080/00031305.2016.1154108)!]**
+
+| Question                                                         | Answer                                                                     |
+|------------------------------------------------------------------|----------------------------------------------------------------------------|
+| **Why do so many colleges and grad schools teach *p-val*=0.05?** | Because that's still what the scientific community and journal editors use.  **BUT IT SHOULDN'T BE** |
+| **Why do so many people still use *p-val*=0.05?**             | Because that's what they were rote taught in college or grad school. **BUT THEY SHOULDN'T BE** |
+
+:::
+
+## Feedback {#sec-feedback}
+
+
+**I would love any feedback/suggestions/questions!!** Feel free to share your thoughts out loud or write them on the board (I will be photographing these at the end of the workshop), you are of course also more than welcome to contact me via [c.jonestodd@auckland.ac.nz](mailto:c.jonestodd@auckland.ac.nz).
+
+**Things I'd particularly like to hear your thoughts on**
+
+ + The experimental design app; did you find any aspects underexplained or confusing?
+ + Are there additional features or tools you’d like to see in the software?
+ + Beyond the Thrive/Survive/Die in-game feedback what else might you like to see?
+ + What modifications would you make for different learning stages etc.?
+ + How might you scale/modify the randomization activity for different learning stages etc.?
