@@ -31,10 +31,11 @@ toc-depth: 2
 ### Useful links
 
  + [Farm Rescue: Tomato Trials](https://statbiscuit-tomato-trials.netlify.app/)
+ + [Tomato Trials poster](https://raw.githubusercontent.com/statbiscuit/statbiscuit/refs/heads/main/docs/NZSA_farm-rescue.png)
  + [Randomization ice breaker](https://statbiscuit.github.io/mini_games/shady/index.html)
- + [Randomization Google Sheet](https://docs.google.com/spreadsheets/d/1-MKzzD5JCwZPlNutjkUoCKQAMeAlF0TD2epJ1k0S01s/edit?usp=sharing)
- + [Cheat sheet: randomisation explained by cows...](https://biosci738.github.io/cowstats/#/section-2) 
- + [Posit Cloud](https://posit.cloud/)
+ + [Randomization Google sheet](https://docs.google.com/spreadsheets/d/1-MKzzD5JCwZPlNutjkUoCKQAMeAlF0TD2epJ1k0S01s/edit?usp=sharing)
+ + [Cheat sheet: randomization explained by cows...](https://biosci738.github.io/cowstats/#/section-2) 
+ + [Posit cloud](https://posit.cloud/)
 
 ## Summary
 
@@ -70,7 +71,9 @@ Throughout this worksheet you'll find a number of different callout boxes:
 
 <big>Open [Farm Rescue: Tomato Trials](https://statbiscuit-tomato-trials.netlify.app/), choose your Farm Name and **Begin**. Explore the application and familiarise yourself with the scenario and backstory! </big>
 
-<big>For the purposes of this activity, when you come to design your experiment only choose **one** variety of tomato and set only **two** treatments (one of which can be a control). Make sure to explore the greenhouse plots and the different natural conditions. </big>
+<big>For the purposes of this activity, when you come to design your experiment only choose **one** variety of tomato and set only **two** treatments. Make sure to explore the greenhouse plots and the different natural conditions. </big>
+
+Note that one of your treatments could be the **Control** (i.e., 0% manure/ not applying anything to a plot).
 
 :::{.callout-warning icon=false}
 ## <i class="fa fa-question-circle" aria-hidden="true"></i> <i class="fa fa-users" aria-hidden="true"></i> <i class="fa fa-pencil-square" aria-hidden="true"></i> Complete the following experimental design table
@@ -82,7 +85,7 @@ Throughout this worksheet you'll find a number of different callout boxes:
 | **Objective**              | The objective of this experiment is to determine what proportion of manure/soil combination will have the optimal tomato yield. |
 | **Hypothesis**             |  |
 | **Response variable**      |  |
-| **Treatments**             | (You should only have chosen two, including a Control if you chose to use one) |
+| **Treatments**             | (You should only have chosen two, including a control if you chose to use one) |
 | **Experimental material**  |  |
 | **How treatments will be applied** | (How did you deal with factors beyond your control (e.g., varying light intensity)) |
 | **How measurements will be taken** |  |
@@ -109,8 +112,12 @@ Verify if all plants survived or did some die before reaching maturity? If a pla
 <big> Run the in-app `R` code by hitting **Run** (*this may take a while, but just wait for the plot*) </big>
 
                 
-Is there anything that needs to be corrected on your graph? *Hint: check axis label spellings* Can you correct  the code and re-run it? Before moving on, please download the data as we will use this for the next section of the workshop.
-        
+Is there anything that needs to be corrected on your graph? *Hint: check axis label spellings* Can you correct  the code and re-run it? 
+
+:::{.callout-caution}
+## Download your data
+Before moving on, please **download your data** as we will use this for the next section of the workshop.
+:::       
         
 <big> Based on your results fill in the missing percentage! </big>
 

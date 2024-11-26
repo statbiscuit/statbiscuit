@@ -192,10 +192,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 class="anchored" data-anchor-id="useful-links">Useful links</h3>
 <ul>
 <li><a href="https://statbiscuit-tomato-trials.netlify.app/">Farm Rescue: Tomato Trials</a></li>
+<li><a href="https://raw.githubusercontent.com/statbiscuit/statbiscuit/refs/heads/main/docs/NZSA_farm-rescue.png">Tomato Trials poster</a></li>
 <li><a href="https://statbiscuit.github.io/mini_games/shady/index.html">Randomization ice breaker</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1-MKzzD5JCwZPlNutjkUoCKQAMeAlF0TD2epJ1k0S01s/edit?usp=sharing">Randomization Google Sheet</a></li>
-<li><a href="https://biosci738.github.io/cowstats/#/section-2">Cheat sheet: randomisation explained by cows…</a></li>
-<li><a href="https://posit.cloud/">Posit Cloud</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1-MKzzD5JCwZPlNutjkUoCKQAMeAlF0TD2epJ1k0S01s/edit?usp=sharing">Randomization Google sheet</a></li>
+<li><a href="https://biosci738.github.io/cowstats/#/section-2">Cheat sheet: randomization explained by cows…</a></li>
+<li><a href="https://posit.cloud/">Posit cloud</a></li>
 </ul>
 </section>
 </section>
@@ -266,7 +267,8 @@ Objectives/Outcomes
 <section id="sec-edactivity" class="level3">
 <h3 class="anchored" data-anchor-id="sec-edactivity">Activity</h3>
 <p><big>Open <a href="https://statbiscuit-tomato-trials.netlify.app/">Farm Rescue: Tomato Trials</a>, choose your Farm Name and <strong>Begin</strong>. Explore the application and familiarise yourself with the scenario and backstory! </big></p>
-<p><big>For the purposes of this activity, when you come to design your experiment only choose <strong>one</strong> variety of tomato and set only <strong>two</strong> treatments (one of which can be a control). Make sure to explore the greenhouse plots and the different natural conditions. </big></p>
+<p><big>For the purposes of this activity, when you come to design your experiment only choose <strong>one</strong> variety of tomato and set only <strong>two</strong> treatments. Make sure to explore the greenhouse plots and the different natural conditions. </big></p>
+<p>Note that one of your treatments could be the <strong>Control</strong> (i.e., 0% manure/ not applying anything to a plot).</p>
 <div class="callout-warning callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -311,7 +313,7 @@ Objectives/Outcomes
 </tr>
 <tr class="even">
 <td><strong>Treatments</strong></td>
-<td>(You should only have chosen two, including a Control if you chose to use one)</td>
+<td>(You should only have chosen two, including a control if you chose to use one)</td>
 </tr>
 <tr class="odd">
 <td><strong>Experimental material</strong></td>
@@ -365,7 +367,20 @@ FAQs
 <p><big> Run your experiment! </big></p>
 <p>Verify if all plants survived or did some die before reaching maturity? If a plant died, what do you think may have caused this? Could this be treatment related, or just a random occurrence?</p>
 <p><big> Run the in-app <code>R</code> code by hitting <strong>Run</strong> (<em>this may take a while, but just wait for the plot</em>) </big></p>
-<p>Is there anything that needs to be corrected on your graph? <em>Hint: check axis label spellings</em> Can you correct the code and re-run it? Before moving on, please download the data as we will use this for the next section of the workshop.</p>
+<p>Is there anything that needs to be corrected on your graph? <em>Hint: check axis label spellings</em> Can you correct the code and re-run it?</p>
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Download your data
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before moving on, please <strong>download your data</strong> as we will use this for the next section of the workshop.</p>
+</div>
+</div>
 <p><big> Based on your results fill in the missing percentage! </big></p>
 <div class="callout-warning callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -407,7 +422,7 @@ Objectives/Outcomes
 </div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -416,7 +431,7 @@ The basic approach to a randomization test
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>
@@ -559,7 +574,7 @@ State the strength of evidence against the null on the basis of this probability
 </div>
 <p><big> Because we don’t have all day I recalculated the statistic <span class="math inline">\(\mu_\text{Blue} - \mu_\text{White}\)</span> 1000 times for the reshuffled labels and plotted this for you below. Reading this plot do your answers above differ? </big></p>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -568,7 +583,7 @@ Test-statistic distribution under the NULL
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
@@ -795,7 +810,7 @@ Test-statistic distribution under the NULL
 </div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -804,7 +819,7 @@ P-values
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>In summary, <strong>p-values</strong> can indicate how incompatible the data are with a specified statistical model; they <strong>do not</strong> measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.</p>
 <p>Note that a p-value does <strong>not</strong> measure the size of an effect or the importance of a result and by itself it does <strong>not</strong> provide a good measure of evidence regarding a model or hypothesis. Note also, that a substantial evidence of a difference does <strong>not</strong> equate to evidence of a substantial difference! Any scientific conclusions and business or policy decisions <strong>should not</strong> be based only on whether a p-value passes a specific threshold as proper inference requires <strong>full</strong> reporting and transparency.</p>
